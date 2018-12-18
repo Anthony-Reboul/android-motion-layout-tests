@@ -6,7 +6,19 @@
     <Transition
             motion:constraintSetStart="@+id/start_state"
             motion:constraintSetEnd="@+id/end_state"
-            motion:duration="5000"/>
+            motion:duration="5000">
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                    android:scaleX="5"
+                    android:scaleY="5"
+                    motion:framePosition="50"
+                    motion:target="@id/top_left_illustration"/>
+
+        </KeyFrameSet>
+
+    </Transition>
 
     <ConstraintSet android:id="@+id/start_state">
 
@@ -23,6 +35,13 @@
                 android:layout_height="90dp"
                 motion:layout_constraintTop_toTopOf="parent"
                 motion:layout_constraintEnd_toEndOf="parent"/>
+
+        <Constraint
+                android:id="@id/top_views_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                motion:barrierDirection="bottom"
+                motion:constraint_referenced_ids="top_right_illustration,top_left_illustration"/>
 
     </ConstraintSet>
 
@@ -42,6 +61,12 @@
                 motion:layout_constraintTop_toTopOf="parent"
                 motion:layout_constraintEnd_toEndOf="parent"/>
 
+        <Constraint
+                android:id="@id/top_views_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                motion:barrierDirection="bottom"
+                motion:constraint_referenced_ids="top_right_illustration,top_left_illustration"/>
 
     </ConstraintSet>
 
