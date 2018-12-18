@@ -10,10 +10,11 @@
 
         <KeyFrameSet>
 
-            <KeyAttribute
-                    android:scaleX="5"
-                    android:scaleY="5"
-                    motion:framePosition="50"
+            <KeyPosition
+                    motion:keyPositionType="parentRelative"
+                    motion:framePosition="17"
+                    motion:percentX="0.0"
+                    motion:percentY="1.0"
                     motion:target="@id/top_left_illustration"/>
 
         </KeyFrameSet>
